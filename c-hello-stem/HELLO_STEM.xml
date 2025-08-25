@@ -1,0 +1,481 @@
+<script type="text/javascript" src="./block/HELLO_STEM.js"></script>
+<script type="text/javascript" src="./generator/HELLO_STEM.js"></script>
+
+
+<category name="Hello STEM 创客平台" colour="160">  
+
+
+    <category id="Official_Example_Program" name="官方示例程序网站" colour="120"><!-- 二级标题：官方示例程序网站 -->
+
+
+      <block type="SHILI_Code">
+    </block>
+
+    </category>
+  
+    <category id="HS-S77_TTS_Speech_synthesis_module" name="HS-S77 TTS语音合成模块" colour="270">    <!-- 二级标题：HS-S77 TTS语音合成模块 -->
+
+    <block type="VTX316_Init">
+    </block>
+
+
+    <block type="VTX316_YUYINBOBAO">
+            <value name="YUYINBOBAO">
+              <block type="text">
+                <field name="TEXT">今天天气晴，适合外出</field>
+              </block>
+            </value>
+          </block>
+
+    <block type="VTX316_YINLIANG">
+  </block>
+
+    <block type="VTX316_ZANTING">
+  </block>
+
+    <block type="VTX316_HUIFU">
+  </block>
+
+  <block type="TTX_YINXIAO">
+  </block>
+
+<block type="TTX_FAYANREN">
+</block>
+  </category>
+
+
+<category id="HS-F23/F24 74HC164D/74HC595A一位数码管 " name="HS-F23/F24 74HC164D/74HC595A一位数码管" colour="120">
+
+<block type="HC164D_init">
+    <value name="CLK_Pin">
+		<shadow type="pins_digital">
+			<field name="PIN">A5</field>
+		</shadow>	
+	</value>
+
+    <value name="DIO_Pin">
+		<shadow type="pins_digital">
+			<field name="PIN">A4</field>
+		</shadow>
+	</value>
+</block>
+	
+<block type="HC164D_display">
+    <value name="value">
+		<shadow type="SMG_value">
+		</shadow>
+	</value>
+</block>
+
+<block type="HC595A_init">
+	<value name="RCK_Pin">
+		<shadow type="pins_digital">
+			<field name="PIN">2</field>
+		</shadow>
+	</value>
+
+    <value name="SCK_Pin">
+		<shadow type="pins_digital">
+			<field name="PIN">A2</field>
+		</shadow>	
+	</value>
+
+	<value name="DS_Pin">
+		<shadow type="pins_digital">
+			<field name="PIN">A1</field>
+		</shadow>
+	</value>
+</block>
+
+<block type="HC595A_display">
+	<value name="value">
+		<shadow type="SMG_value"></shadow>
+		</value>
+	</block>
+</category>
+
+<category id="HS-S57-L SU-03T 语音识别控制模块" name="HS-S57-L SU-03T 语音识别控制模块" colour="120">
+    <block type="yuyininit">
+    <value name="PIN1">
+			<shadow type="pins_digital"></shadow>
+		</value>
+    <value name="PIN2">
+			<shadow type="pins_digital"></shadow>
+		</value>
+    </block>
+
+
+   <block type="yuyinshibie1">
+     <value name="VALUE">
+			<shadow type="math_number">
+			   <field name="NUM">0x40</field>
+			</shadow>
+			<block type="yuyinshibie">
+			</block>
+	</value>
+   </block>
+
+    <block type="yuyinqinchu"></block>
+
+    <block type="boxiaoshu">
+			  <value name="XIAOSHU">
+			   <shadow type="math_number">
+				<field name="NUM">12.34</field>
+			   </shadow>
+			  </value>
+    </block>
+        <block type="bozhenshu">
+			  <value name="ZHENSHU">
+			   <shadow type="math_number">
+				<field name="NUM">25</field>
+			   </shadow>
+			  </value>
+    </block>
+    <block type="yuyinbobao">
+    <value name="PIN3">
+			<shadow type="pins_digital"></shadow>
+		</value>
+    </block>
+</category>
+
+
+<category id="HS-F26 语音播报模块" name="HS-F26 语音播报模块" colour="160">
+<block type="yuyingmokuai">
+    <field name="Entry">0x00</field>
+    <value name="Pin">
+        <shadow type="pins_digital">
+        <field name="PIN">0</field>
+        </shadow>
+    </value>
+    <value name="Delay">
+        <shadow type="math_number">
+        <field name="NUM">1000</field>
+        </shadow>
+    </value>
+</block>
+</category> 
+
+
+
+<category id="HS-S69 手势识别传感器" name="HS-S69 手势识别传感器" colour="120">
+
+<block type="Gesture_Sensor_Init">
+</block>
+
+<block type="Gesture_Sensor_SHIBIE">
+</block>
+
+<block type="Gesture_Sensor_SHIBIE_ENG">
+</block>
+
+</category> 
+
+
+
+<category id="HS-S73 I2C数字功率计模块" name="HS-S73 I2C数字功率计模块" colour="165">
+
+<block type="IIC_Digital_Power">
+</block>
+
+<block type="BusVoltage">
+</block>
+
+<block type="ShuntVoltage">
+</block>
+
+<block type="Current">
+</block>
+
+<block type="Power">
+</block>
+
+</category> 
+
+<category id="HS-F27 PCA9685 I2C四路MOC_PF电机、8PIN扩展板" name="HS-F27 PCA9685 I2C四路MOC_PF电机、8PIN扩展板" colour="100">
+
+    <block type="PWM_duoji_int">
+        <value name="duojiaddress_pwm">
+            <shadow type="math_number">
+                <field name="NUM">0x40</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="PWM_duojipath_set" name="舵机设置">
+
+        <value name="hour">
+
+            <shadow type="math_number">
+
+                <field name="NUM">0</field>
+
+            </shadow>
+
+        </value>
+
+        <value name="second">
+
+            <shadow type="math_number">
+
+                <field name="NUM">10</field>
+
+            </shadow>
+
+        </value>
+
+    </block>
+
+
+    <block type="PWM_begin_int">
+        <value name="address_pwm">
+            <shadow type="math_number">
+                <field name="NUM">0x40</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="PWM_minmix_int">
+        <value name="MIN">
+            <shadow type="math_number">
+                <field name="NUM">150</field>
+            </shadow>
+        </value>
+        <value name="MAX">
+            <shadow type="math_number">
+                <field name="NUM">600</field>
+            </shadow>
+        </value>
+    </block>
+    <block type="PWM_setfreq_int">
+        <value name="setfreq">
+            <shadow type="math_number">
+                <field name="NUM">60</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="PWM_path_set" name="PWM通道设置">
+
+        <value name="hour">
+
+            <shadow type="math_number">
+
+                <field name="NUM">0</field>
+
+            </shadow>
+
+        </value>
+
+        <value name="minute">
+
+            <shadow type="math_number">
+
+                <field name="NUM">1</field>
+
+            </shadow>
+
+        </value>
+
+        <value name="second">
+
+            <shadow type="math_number">
+
+                <field name="NUM">10</field>
+
+            </shadow>
+
+        </value>
+
+    </block>
+
+</category>
+
+
+<category id="HS-S45 气压传感器" name="HS-S45 气压传感器" colour="40">
+
+  <block type="base_setup">
+    <statement name="DO">
+      <block type="serial_begin"> 
+        <field name="serial_select">Serial</field>
+        <value name="CONTENT">
+          <shadow type="math_number">
+            <field name="NUM">9600</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil">
+            <field name="MODE">UNTIL</field> 
+            <value name="BOOL">
+              <shadow type="logic_boolean">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="make_arduino_bmp180_begin_i2c_return_status"> 
+                <field name="bmp180_name">BMP</field> 
+                <value name="bmp180_oversampling">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="make_arduino_bmp180_oversampling">
+                    <field name="type">BMP085_ULTRALOWPOWER</field> 
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO"> 
+              <block type="serial_println">
+                <field name="serial_select">Serial</field>
+                <value name="CONTENT">
+                  <block type="text">
+                    <field name="TEXT">没有搜索到BMP085/BMP180</field> 
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_delay">
+                    <field name="UNIT">delay</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number">
+                        <field name="NUM">500</field> 
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  
+  <block type="base_setup">
+    <statement name="DO">
+      <block type="serial_begin"> 
+        <field name="serial_select">Serial</field>
+        <value name="CONTENT">
+          <shadow type="math_number">
+            <field name="NUM">9600</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_whileUntil">
+            <field name="MODE">UNTIL</field>
+            <value name="BOOL">
+              <shadow type="logic_boolean">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+              <block type="make_arduino_bmp180_begin_i2c_soft" inline="false"> 
+                <field name="bmp180_name">BMP</field>
+                <value name="sda">
+                  <shadow type="pins_digital">
+                    <field name="PIN">2</field>
+                  </shadow>
+                </value>
+                <value name="scl">
+                  <shadow type="pins_digital">
+                    <field name="PIN">3</field>
+                  </shadow>
+                </value>
+                <value name="oversampling">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field> 
+                  </shadow>
+                  <block type="make_arduino_bmp180_oversampling">
+                    <field name="type">BMP085_ULTRALOWPOWER</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO"> 
+              <block type="serial_println">
+                <field name="serial_select">Serial</field>
+                <value name="CONTENT">
+                  <block type="text">
+                    <field name="TEXT">没有搜索到BMP085/BMP180传感器</field> <!-- 提示信息 -->
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_delay">
+                    <field name="UNIT">delay</field>
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number">
+                        <field name="NUM">500</field> 
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  
+  <block type="make_arduino_bmp180_get_temperature_pressure">
+  </block>
+
+  
+  <block type="make_arduino_bmp180_get_altitude">
+    <value name="bmp180_get_altitude_data">
+      <shadow type="math_number">
+        <field name="NUM">101325</field>
+      </shadow>
+    </value>
+  </block>
+</category>
+
+<category id="HS-S70 心率传感器" name="HS-S70 心率传感器" colour="40">
+<block type="ruilong_MAX3010X_Value">
+        </block>
+        <block type="ruilong_MAX3010X_HR">
+            <field name="VAR">Bpm_value</field>
+
+            <statement name="DO">
+                <block type="serial_print">
+                    <field name="serial_select">Serial</field>
+                    <value name="CONTENT">
+                        <block type="text">
+                            <field name="TEXT">Bpm_value = </field>
+                        </block>
+                    </value>
+                    <next>
+                        <block type="serial_print">
+                            <field name="serial_select">Serial</field>
+                            <value name="CONTENT">
+                                <block type="variables_get">
+                                    <field name="VAR">Bpm_value</field>
+                                </block>
+                            </value>
+                            <next>
+                                <block type="serial_println">
+                                    <field name="serial_select">Serial</field>
+                                    <value name="CONTENT">
+                                        <block type="text">
+                                            <field name="TEXT"> bpm</field>
+                                        </block>
+                                    </value>
+                                </block>
+                            </next>
+                        </block>
+                    </next>
+                </block>
+            </statement>
+        </block>
+</category>
+
+<category id="HS-S79 TDS水质传感器" name="HS-S79 TDS水质传感器" colour="40">
+
+<block type="TDS_Init">
+</block>
+
+<block type="TDS_Start">
+</block>
+
+<block type="TDS_Value">
+</block>
+
+</category> 
+
+</category> 
